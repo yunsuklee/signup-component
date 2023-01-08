@@ -24,6 +24,7 @@ export const StyledForm = styled.form`
     font-weight: ${({ theme }) => theme.weights.bold};
     border-radius: 5px;
     border: solid 1px rgba(0, 0, 0, .15);
+    color: ${({ theme }) => theme.colors.dark_blue};
   }
   
   input:focus {

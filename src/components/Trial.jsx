@@ -1,4 +1,3 @@
-import React from 'react'
 import { StyledTrial } from './styles/Trial.styled'
 
 const Trial = () => {

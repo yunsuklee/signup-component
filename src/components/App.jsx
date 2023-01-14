@@ -30,10 +30,10 @@ const theme = {
 const App = () => {
   const [users, setUsers] = useState([])
   const [user, setUser] = useState({
-    first_name: "",
-    last_name: "",
-    email: "",
-    password: ""
+    first_name: '',
+    last_name: '',
+    email: '',
+    password: ''
   })
 
   useEffect(() => {
@@ -54,25 +54,26 @@ const App = () => {
     if (currentUser) {
       alert(`The email ${user.email} is already in use`)
     } else {
-      const newUser = { ...user, id: users.length + 1}
+      const newUser = { ...user, id: users.length + 1 }
       userServices
         .register(newUser)
         .then(res => {
+          console.log(res)
           setUsers(users.concat(newUser))
           window.confirm(`Welcome ${newUser.first_name}!`)
         })
     }
     setUser({
-      first_name: "",
-      last_name: "",
-      email: "",
-      password: ""
+      first_name: '',
+      last_name: '',
+      email: '',
+      password: ''
     })
   }
 
   const handleFirstNameChange = (event) => {
     const newUser = {
-      ...user, 
+      ...user,
       first_name: event.target.value
     }
     setUser(newUser)
@@ -80,7 +81,7 @@ const App = () => {
 
   const handleLastNameChange = (event) => {
     const newUser = {
-      ...user, 
+      ...user,
       last_name: event.target.value
     }
     setUser(newUser)
@@ -88,7 +89,7 @@ const App = () => {
 
   const handleEmailChange = (event) => {
     const newUser = {
-      ...user, 
+      ...user,
       email: event.target.value
     }
     setUser(newUser)
@@ -96,7 +97,7 @@ const App = () => {
 
   const handlePasswordChange = (event) => {
     const newUser = {
-      ...user, 
+      ...user,
       password: event.target.value
     }
     setUser(newUser)
@@ -108,13 +109,13 @@ const App = () => {
         <GlobalStyles />
         <Header />
         <Trial />
-        <Form 
+        <Form
           newUser={user}
           handleSubmit={handleSubmit}
           handleFirstNameChange={handleFirstNameChange}
           handleLastNameChange={handleLastNameChange}
           handleEmailChange={handleEmailChange}
-          handlePasswordChange={handlePasswordChange} 
+          handlePasswordChange={handlePasswordChange}
         />
       </>
     </ThemeProvider>

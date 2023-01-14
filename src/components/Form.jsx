@@ -1,39 +1,38 @@
-import React from 'react'
-import { StyledForm } from './styles/Form.styled'
 import Button from './Button'
+import { StyledForm } from './styles/Form.styled'
 
 const Form = (props) => {
   return (
     <StyledForm onSubmit={props.handleSubmit}>
-      <input 
-        type="text" 
-        placeholder="First Name" 
+      <input
+        type="text"
+        placeholder="First Name"
         name="first-name"
-        required 
+        required
         value={props.newUser.first_name}
         onChange={props.handleFirstNameChange}
       />
-      <input 
-        type="text" 
-        placeholder="Last Name" 
+      <input
+        type="text"
+        placeholder="Last Name"
         name="last-name"
-        required 
+        required
         value={props.newUser.last_name}
         onChange={props.handleLastNameChange}
       />
-      <input 
-        type="email" 
-        placeholder="Email Address" 
+      <input
+        type="email"
+        placeholder="Email Address"
         name="email"
-        required 
+        required
         value={props.newUser.email}
         onChange={props.handleEmailChange}
       />
-      <input 
-        type="password" 
-        placeholder="Password" 
+      <input
+        type="password"
+        placeholder="Password"
         name="password"
-        required 
+        required
         value={props.newUser.password}
         onChange={props.handlePasswordChange}
       />

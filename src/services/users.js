@@ -3,8 +3,10 @@ import axios from 'axios'
 const baseUrl = 'http://localhost:3001/users'
 
 const getAll = () => {
-  const req = axios.get(baseUrl)
-  return req.then(res => res.data)
+  return axios
+    .get(baseUrl)
+    .then(res => res.data)
+    .catch(err => err)
 }
 
 const register = newObject => {

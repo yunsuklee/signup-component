@@ -42,4 +42,12 @@ export const StyledForm = styled.form`
     color: ${({ theme }) => theme.colors.red};
     cursor: pointer;
   }
+
+  @media (min-width: 1440px) {
+    width: 50%;
+    float: left;
+    max-width: 600px;
+    padding: 2.5%;
+    margin-top: 1.5%;
+  }
 `

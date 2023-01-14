@@ -18,4 +18,23 @@ export const StyledHeader = styled.header`
     font-size: 1.5em;
     font-weight: ${({ theme }) => theme.weights.bolder};
   }
+
+  @media (min-width: 1440px) {
+    width: 50%;
+    float: left;
+    text-align: left;
+    height: 100vh;
+    margin: 0;
+    margin-top: -2.5%;
+    padding-right: 5%;
+    padding-left: 15%;
+
+    h1 {
+      font-size: 3em;
+    }
+
+    p {
+      font-size: 18px;
+    }
+  }
 `

@@ -22,4 +22,12 @@ export const StyledTrial = styled.div`
   span {
     font-weight: ${({ theme }) => theme.weights.bolder};
   }
+
+  @media (min-width: 1440px) {
+    width: 50%;
+    float: left;
+    max-width: 600px;
+    max-height: 60px;
+    margin-top: 10%;
+  }
 `

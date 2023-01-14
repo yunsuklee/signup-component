@@ -7,6 +7,7 @@ export const StyledTrial = styled.div`
   background-color: ${({ theme }) => theme.colors.blue};
   border-radius: 10px;
   box-shadow: 0px 8px 0px 0px rgba(0, 0, 0, .15);
+  transition: all 0.2s ease-in-out;
 
   display: flex;
   align-items: center;
@@ -21,6 +22,11 @@ export const StyledTrial = styled.div`
 
   span {
     font-weight: ${({ theme }) => theme.weights.bolder};
+  }
+
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.02);
   }
 
   @media (min-width: 1440px) {

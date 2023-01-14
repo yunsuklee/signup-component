@@ -4,6 +4,7 @@ import { ThemeProvider } from 'styled-components'
 import userServices from '../services/users'
 import GlobalStyles from './styles/Global'
 import Header from './Header'
+import Footer from './Footer'
 import Trial from './Trial'
 import Form from './Form'
 
@@ -117,6 +118,7 @@ const App = () => {
           handleEmailChange={handleEmailChange}
           handlePasswordChange={handlePasswordChange}
         />
+        <Footer />
       </>
     </ThemeProvider>
   )

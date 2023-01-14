@@ -9,6 +9,7 @@ export const StyledButton = styled.button`
   border-radius: 5px;
   box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, .4);
   padding-top: 8px;
+  transition: all 0.2s ease-in-out;
 
   display: flex;
   flex-direction: column;
@@ -20,4 +21,9 @@ export const StyledButton = styled.button`
   text-align: center; 
   letter-spacing: 1px;
   font-weight: ${({ theme }) => theme.weights.bold};
+
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.02);
+  }
 `
